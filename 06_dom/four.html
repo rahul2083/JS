@@ -12,5 +12,38 @@
         <li>Java</li>
     </ul>
 </body>
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("React")
+    addLanguage("Next.js")
 
+    function addOptiLanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    // edit
+
+
+   const secondlang =  document.querySelector("li:nth-child(2)")
+    // secondlang.innerHTML = "Mojo"
+
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondlang.replaceWith(newli)
+
+    const fristlang = document.querySelector("li:frist-child")
+    fristlang.outerHTML = '<li>TypeScript</li>'
+
+    // remove
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
 </html>
